@@ -96,7 +96,6 @@ function getProfessorExtension(searchPageURL, professorName){
 	    method: 'GET',
 	    action: 'xhttp',
 	    url: searchPageURL,
-	    data: 'q=something',
 	    professorName: professorName
 	}
 
@@ -137,7 +136,6 @@ function findRatings(professorPageURL, professorName){
 	    method: 'GET',
 	    action: 'xhttp',
 	    url: professorPageURL,
-	    data: 'q=something',
 	    professorName: professorName
 	}
 

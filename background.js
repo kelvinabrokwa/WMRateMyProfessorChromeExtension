@@ -3,7 +3,7 @@
  *  action: "xhttp" for a cross-origin HTTP request
  *  method: Default "GET"
  *  url   : required, but not validated
- *  data  : data to send in a POST request
+ *  professorName: The name of the professor associated with request
  *
  * The callback function is called upon completion of the request */
 chrome.runtime.onMessage.addListener(function(request, sender, callback) {
