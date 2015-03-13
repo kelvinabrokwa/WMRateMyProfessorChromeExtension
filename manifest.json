@@ -1,0 +1,32 @@
+{
+  "manifest_version": 2,
+
+  "name": "W&M Rate My Professor Extension",
+  "description": "This extension adds a column that displays the Rate My Professor info for each professor on the William and Mary open course list webpage: https://courselist.wm.edu/courselist/",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "icons": { "16": "icon.png",
+           "48": "icon.png",
+          "128": "icon.png" },
+  "content_scripts": [
+    {
+      "matches": ["https://courselist.wm.edu/courselist/courseinfo/*"],
+      "js": ["jquery-1.11.2.js","wmrmp.js"]
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "https://courselist.wm.edu/courselist/courseinfo/*",
+    "http://www.ratemyprofessors.com/*"
+  ],
+  "web_accessible_resources": [
+    "http://www.ratemyprofessors.com/*"
+  ],
+  "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    }
+}
